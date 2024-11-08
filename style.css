@@ -96,7 +96,7 @@ section {
 
 }
 
-.moeda-box {
+.currency-box {
 
     display: flex;
     flex-direction: column;
@@ -105,16 +105,16 @@ section {
 
 }
 
-.moeda {
+.currency {
 
     color: #777777;
-    font-size: 14px;
+    font-size: 20px;
 
 
 
 }
 
-.moeda-velha {
+.currency-value, .currency-value-to-convert {
 
     color: #555555;
     font-weight: 700;
