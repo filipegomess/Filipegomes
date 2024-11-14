@@ -1,124 +1,89 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", serif;
-    outline: none;
-
 }
 
 body {
-     background-color: #8A51FC;
-     
-}
-
-.logo {
-    width: 300px;
-    display: block;
-    margin: 20px auto;
-}
-
-main {
-
-    width: 375px;
-    background: #f4f4f4;
-    border-radius: 20px;
-    margin: 0 auto 40px;
-    padding: 44px 24px 23px;
+    background: url("https://picsum.photos/1600/900");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
 }
 
-label {
+.container {
 
-    color: #777777;
-    font-weight: 400;
-    font-size: 14px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ; 
 
 }
 
-select, input {
+.buttons {
 
-    background: #FFFFFF;
-    border-radius: 4px;
-    border: 1px solid #BBBBBB;
-    height: 48px;
-    width: 100%;
-    margin-bottom: 24px;
-    padding-left: 18px;
-    font-weight: 700;
-    font-size: 16px;
-    color: #555555;
-    cursor: pointer;
-    appearance: none;
-
+    margin: 30px 0;
+    display: flex;
+    gap: 40px;
 }
 
 button {
 
-    background: #772FD2;
-    border-radius: 5px;
-    width: 100%;
-    border: none;
-    height: 48px;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 50px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.35 ease-in-out;
 
-}
-
-button:active {
-
-    opacity: 0.6;
 }
 
 button:hover {
 
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-section {
+#pedra {
 
-    border: 1px solid #772FD3;
-    border-radius: 20px;
-    margin-top: 36px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    background-color: #2a00ff
 }
+    
+#papel {
 
-.seta-img {
-
-    margin: 15px 0;
+    background-color: #9ee01a;
 
 }
 
-.currency-box {
+#tesoura {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    background-color: #7dbeed;
 
 }
 
-.currency {
+p {
 
-    color: #777777;
-    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
+.your-score span {
+
+    color: blue;
 
 
 }
 
-.currency-value, .currency-value-to-convert {
+.machine-score span {
 
-    color: #555555;
-    font-weight: 700;
-    font-size: 20px;
+
+    color: red ;
+
 
 }
 
