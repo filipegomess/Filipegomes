@@ -3,37 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Facebook Login Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 980px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left {
+            flex: 1;
+            padding: 20px;
+        }
+        .left h1 {
+            font-size: 5rem;
+            color: #1877f2;
+            margin: 0;
+        }
+        .left p {
+            font-size: 2rem;
+            color: #606770;
+        }
+        .right {
+            flex: 1;
+            padding: 20px;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .right input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .right button {
+            width: 100%;
+            padding: 15px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .right button:hover {
+            background-color: #145dbf;
+        }
+        .right .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .right .link a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .right .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Facebook</div>
-        <input type="text" placeholder="Search Facebook" class="search-bar">
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Friends</a>
-            <a href="#">Messages</a>
-            <a href="#">Notifications</a>
+    <div class="container">
+        <div class="left">
+            <h1>Facebook</h1>
+            <p>Conecte-se com amigos e com o mundo ao seu redor no Facebook.</p>
         </div>
-    </header>
-
-    <main class="main-content">
-        <section class="login-section">
-            <h1>Welcome to Facebook</h1>
-            <p>Connect with friends and the world around you on Facebook.</p>
-            <form class="login-form">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Log In</button>
+        <div class="right">
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email ou Número de telefone" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Conecte-se</button>
+                <div class="link">
+                    <a href="#">Esqueci a senha?</a>
+                </div>
+                <hr>
+                <button type="button" style="background-color: #42b72a;">Criar nova conta</button>
             </form>
-            <p><a href="#">Forgot Password?</a></p>
-            <button class="create-account">Create New Account</button>
-        </section>
-    </main>
+        </div>
+    </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Facebook Clone. All rights reserved.</p>
-    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === "test@test.com" && password === "123456") {
+                alert("Login successful!");
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+    </script>
 </body>
 </html>
